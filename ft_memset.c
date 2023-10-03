@@ -10,9 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
+#include <string.h>
+
 void	*ft_memset(void *str, int c, size_t n)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (i < n)
@@ -20,4 +23,16 @@ void	*ft_memset(void *str, int c, size_t n)
 		((char *)str)[i] = c;
 		i++;
 	}
+	return str;
 }
+
+// int main()
+// {
+// 	char str[] = "Hello";
+// 	char str2[] = "Hello";
+// 	ft_memset(str, '&', 3);
+//     memset(str2, '&', 3);
+//     printf("%s\n", str);
+//     printf("%s", str2);
+// 	return 0;
+// }

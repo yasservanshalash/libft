@@ -10,8 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
+#include <string.h>
 
-size_t strlcat(char *dst, const char *src, size_t size)
+size_t ft_strlcat(char *dst, const char *src, size_t size)
 {
     int i;
     size_t j;
@@ -31,4 +33,13 @@ size_t strlcat(char *dst, const char *src, size_t size)
     }
     dst[i] = '\0';
     return j;
+}
+
+int main()
+{
+    char str[] = "Hello";
+    char str2[] = " World";
+    printf("%d", strlcat(str2, str, 7));
+    printf("%zu", ft_strlcat(str2, str, 7));
+    return 0;
 }
