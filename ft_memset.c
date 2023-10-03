@@ -6,18 +6,18 @@
 /*   By: yshalash <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 09:17:11 by yshalash          #+#    #+#             */
-/*   Updated: 2023/10/03 09:17:13 by yshalash         ###   ########.fr       */
+/*   Updated: 2023/10/03 09:59:48 by yshalash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void *ft_memset(void *str, int c, size_t n)
+void	*ft_memset(void *str, int c, size_t n)
 {
-  int i;
+	int	i;
 
-  i = 0;
-  while (i < n)
-  {
-    ((char *)str)[i] = c;
-    i++;
-  }
+	i = 0;
+	while (i < n)
+	{
+		((char *)str)[i] = c;
+		i++;
+	}
 }

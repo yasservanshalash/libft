@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yshalash <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/03 08:40:29 by yshalash          #+#    #+#             */
-/*   Updated: 2023/10/03 09:58:49 by yshalash         ###   ########.fr       */
+/*   Created: 2023/10/03 09:57:49 by yshalash          #+#    #+#             */
+/*   Updated: 2023/10/03 10:12:59 by yshalash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t	strlen(const char *s)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	int	i;
 
 	i = 0;
-	while (s[i] != '\0')
+	while (i < n)
+	{
+		((char *)dest)[i] = ((char *)src)[i];
 		i++;
-	return (i);
+	}
 }
