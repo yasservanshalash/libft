@@ -10,4 +10,22 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+char *ft_strrchr(const char *s, int c)
+{
+    int i;
+    int index;
 
+    i = 0;
+    index = 0;
+    while (s[i] != '\0')
+    {
+        if (s[i] == c)
+            index = i;
+        i++;
+    }
+
+    if(index > 0)
+        return &s[index];
+    else
+        return NULL;
+}
