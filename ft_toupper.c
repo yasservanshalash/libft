@@ -6,11 +6,11 @@
 /*   By: yshalash <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 11:11:32 by yshalash          #+#    #+#             */
-/*   Updated: 2023/10/03 11:11:34 by yshalash         ###   ########.fr       */
+/*   Updated: 2023/10/03 17:45:58 by yshalash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_toupper(int c)
+int	ft_toupper(int c)
 {
-    return c - 32;
+	return (c - 32);
 }

@@ -6,11 +6,10 @@
 /*   By: yshalash <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 10:11:12 by yshalash          #+#    #+#             */
-/*   Updated: 2023/10/03 10:13:14 by yshalash         ###   ########.fr       */
+/*   Updated: 2023/10/03 17:49:32 by yshalash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void *memmove(void *str1, const void *str2, size_t n)
+void	*memmove(void *str1, const void *str2, size_t n)
 {
-    
 }

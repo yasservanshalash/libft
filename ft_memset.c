@@ -6,7 +6,7 @@
 /*   By: yshalash <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 09:17:11 by yshalash          #+#    #+#             */
-/*   Updated: 2023/10/03 09:59:48 by yshalash         ###   ########.fr       */
+/*   Updated: 2023/10/03 17:49:01 by yshalash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_memset(void *str, int c, size_t n)
 		((char *)str)[i] = c;
 		i++;
 	}
-	return str;
+	return (str);
 }
 
 // int main()
