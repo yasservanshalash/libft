@@ -18,7 +18,7 @@ static int	is_num(char c)
 		return (0);
 }
 
-static int	logic(char *str, int i, int sign, int number)
+static int	logic(const char *str, int i, int sign, int number)
 {
 	while (str[i] == ' ' || (str[i] >= '\t' && str[i] <= '\r'))
 		i++;

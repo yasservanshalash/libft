@@ -1,6 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yshalash <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/03 11:50:46 by yshalash          #+#    #+#             */
+/*   Updated: 2023/10/03 17:42:21 by yshalash         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+// ADD 42 HEADER!!
+
 #include <stdio.h>
 
-int	memcmp(const void *ptr1, const void *ptr2, size_t num )
+int	ft_memcmp(const void *ptr1, const void *ptr2, size_t num )
 {
 	size_t	i;
 

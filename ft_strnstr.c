@@ -10,22 +10,49 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+// ADD 42 HEADER!!!
 #include <stdio.h>
 
-void	*ft_memchr(const void *s, int c, size_t n)
+size_t	strlen(const char *s)
 {
-	size_t				i;
-	const unsigned char	*unsigned_s;
+	int	i;
 
 	i = 0;
-	unsigned_s = s;
-	while (i < n)
+	while (s[i] != '\0')
+		i++;
+	return (i);
+}
+
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
+{
+	size_t	i;
+
+	i = 0;
+	while (i < n && s1[i] != '\0' && s2[i] != '\0')
 	{
-		if (unsigned_s[i] == c)
-		{
-			return ((void *)(unsigned_s + i));
-		}
+		if (s1[i] != s2[i])
+			return (s1[i] - s2[i]);
 		i++;
 	}
-	return (NULL);
+	return (s1[i] - s2[i]);
+}
+
+char *strnstr(const char *haystack, const char *needle, size_t len)
+{
+    size_t haystack_len = strlen(haystack);
+    size_t needle_len = strlen(needle);
+
+    if (needle_len == 0) {
+        return (char *)haystack;  // Empty needle, return haystack
+    }
+
+    size_t i = 0;
+    while (i <= haystack_len - needle_len && i <= len - needle_len) {
+        if (ft_strncmp(haystack + i, needle, needle_len) == 0) {
+            return (char *)(haystack + i);  // Found the substring
+        }
+        i++;
+    }
+
+    return NULL;  // Substring not found
 }
