@@ -37,22 +37,22 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	return (s1[i] - s2[i]);
 }
 
-char *strnstr(const char *haystack, const char *needle, size_t len)
+char	*strnstr(const char *haystack, const char *needle, size_t len)
 {
-    size_t haystack_len = strlen(haystack);
-    size_t needle_len = strlen(needle);
+	size_t		haystack_len;
+	size_t		needle_len;
+	size_t		i;
 
-    if (needle_len == 0) {
-        return (char *)haystack;  // Empty needle, return haystack
-    }
-
-    size_t i = 0;
-    while (i <= haystack_len - needle_len && i <= len - needle_len) {
-        if (ft_strncmp(haystack + i, needle, needle_len) == 0) {
-            return (char *)(haystack + i);  // Found the substring
-        }
-        i++;
-    }
-
-    return NULL;  // Substring not found
+	haystack_len = strlen(haystack);
+	needle_len = strlen(needle);
+	if (needle_len == 0)
+		return ((char *)haystack);
+	i = 0;
+	while (i <= haystack_len - needle_len && i <= len - needle_len)
+	{
+		if (ft_strncmp(haystack + i, needle, needle_len) == 0)
+			return ((char *)(haystack + i));
+		i++;
+	}
+	return (NULL);
 }
