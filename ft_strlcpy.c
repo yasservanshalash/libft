@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
+
 size_t	ft_strlcpy(char *destination, const char *source, size_t size)
 {
 	size_t	i;
