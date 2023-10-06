@@ -13,7 +13,7 @@
 // ADD 42 HEADER!!!
 #include <stdio.h>
 
-size_t	strlen(const char *s)
+static size_t	strlen(const char *s)
 {
 	int	i;
 
@@ -23,7 +23,7 @@ size_t	strlen(const char *s)
 	return (i);
 }
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+static int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
 
@@ -37,16 +37,20 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	return (s1[i] - s2[i]);
 }
 
-char	*strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t		haystack_len;
 	size_t		needle_len;
 	size_t		i;
 
+	if (haystack == NULL || needle == NULL)
+		return (NULL);
 	haystack_len = strlen(haystack);
 	needle_len = strlen(needle);
 	if (needle_len == 0)
 		return ((char *)haystack);
+	if (len == 0 || len < needle_len || len > haystack_len)
+		return NULL;
 	i = 0;
 	while (i <= haystack_len - needle_len && i <= len - needle_len)
 	{

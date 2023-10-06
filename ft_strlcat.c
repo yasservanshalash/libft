@@ -20,11 +20,11 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 
 	i = 0;
 	j = 0;
-	while (dst[i] != '\0')
+	while ((unsigned char)dst[i] != '\0')
 	{
 		i++;
 	}
-	while (j < size && src[j] != '\0')
+	while (j < size && (unsigned char)src[j] != '\0')
 	{
 		dst[i] = src[j];
 		j++;

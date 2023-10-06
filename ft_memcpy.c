@@ -12,15 +12,25 @@
 
 #include <stdio.h>
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
+	char	*srcc;
+	char	*dstc;
 	size_t	i;
 
-	i = 0;
-	while (i < n)
+	i = -1;
+	srcc = (char *)src;
+	dstc = (char *)dst;
+	if (dst == NULL || src == NULL || len == 0)
 	{
-		((char *)dest)[i] = ((char *)src)[i];
-		i++;
+		return (dst);
 	}
-	return (dest);
+	if (srcc < dstc)
+		while ((int)(--len) >= 0)
+			*(dstc + len) = *(srcc + len);
+	else
+		while (++i < len)
+			*(dstc + i) = *(srcc + i);
+	return (dst);
 }
+

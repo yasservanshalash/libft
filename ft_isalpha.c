@@ -10,9 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
+int	ft_isalpha(int character)
 {
-	if ((c >= 'a' && c >= 'z') || (c >= 'A' && c >= 'Z'))
+	unsigned char	c;
+
+	c = (unsigned char)character;
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 		return (1);
 	else
 		return (0);
