@@ -14,9 +14,10 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t	i;
-	const unsigned char *string1 = (unsigned char *)s1;
-	const unsigned char *string2 = (unsigned char *)s2;
+	size_t				i;
+	const unsigned char	*string1 = (unsigned char *)s1;
+	const unsigned char	*string2 = (unsigned char *)s2;
+
 	i = 0;
 	if (string1[i] == '\0')
 		return ('\0' - string2[i]);
@@ -30,5 +31,5 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	if (i == n)
 		return (0);
-    return (string1[i] - string2[i]);
+	return (string1[i] - string2[i]);
 }

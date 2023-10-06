@@ -39,9 +39,9 @@ static int	ft_strncmp(const char *s1, const char *s2, size_t n)
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	size_t		haystack_len;
-	size_t		needle_len;
-	size_t		i;
+	size_t	haystack_len;
+	size_t	needle_len;
+	size_t	i;
 
 	if (haystack == NULL || needle == NULL)
 		return (NULL);
@@ -50,7 +50,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	if (needle_len == 0)
 		return ((char *)haystack);
 	if (len == 0 || len < needle_len || len > haystack_len)
-		return NULL;
+		return (NULL);
 	i = 0;
 	while (i <= haystack_len - needle_len && i <= len - needle_len)
 	{
