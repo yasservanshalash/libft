@@ -15,31 +15,25 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	int		i;
+	size_t	i;
 	size_t	j;
 
 	i = 0;
 	j = 0;
-	while ((unsigned char)dst[i] != '\0')
+	while (i < size && (unsigned char)dst[i] != '\0')
 	{
 		i++;
 	}
-	while (j < size && (unsigned char)src[j] != '\0')
+	while (j < size - 1 && (unsigned char)src[j] != '\0')
 	{
 		dst[i] = src[j];
 		j++;
 		i++;
 	}
 	dst[i] = '\0';
-	return (j);
+	while ((unsigned char)src[j] != '\0')
+	{
+		i++;
+	}
+	return (i);
 }
-/*
-int main()
-{
-    char str[] = "Hello";
-    char str2[] = " World";
-    printf("%d", strlcat(str2, str, 7));
-    printf("%zu", ft_strlcat(str2, str, 7));
-    return 0;
-}
-*/
