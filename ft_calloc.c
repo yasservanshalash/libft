@@ -1,32 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yshalash <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/03 11:24:43 by yshalash          #+#    #+#             */
-/*   Updated: 2023/10/03 17:43:02 by yshalash         ###   ########.fr       */
+/*   Created: 2023/10/03 09:54:01 by yshalash          #+#    #+#             */
+/*   Updated: 2023/10/03 10:01:52 by yshalash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
-char	*ft_strrchr(const char *s, int c)
+static void	*ft_memset(void *str, int c, size_t n)
 {
-	int	i;
-	int	index;
+	size_t	i;
 
 	i = 0;
-	index = 0;
-	while (s[i] != '\0')
+	while (i < n)
 	{
-		if (s[i] == c)
-			index = i;
+		((char *)str)[i] = c;
 		i++;
 	}
-	if (index > 0)
-		return ((char *)&s[index]);
-	else
+	return (str);
+}
+
+void	*ft_calloc(size_t count, size_t size)
+{
+	void	*p;
+
+	p = malloc(count * size);
+	if (p == NULL)
 		return (NULL);
+	else
+		ft_memset(p, 0, count * size);
+	return (p);
 }
