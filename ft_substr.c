@@ -13,22 +13,25 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-    size_t i = start;
-    size_t j = 0;
-    char *substring = (char *)malloc(len);
-    if (substring == NULL)
-    {
-        return NULL;
-    }
-    
-    while(s[i] != '\0' && j < len)
-    {
-        substring[j] = s[i];
-        i++;
-        j++;
-    }
-    substring[j] = '\0';
-    return substring;
+	size_t	i;
+	size_t	j;
+	char	*substring;
+
+	i = start;
+	j = 0;
+	substring = (char *)malloc(len);
+	if (substring == NULL)
+	{
+		return (NULL);
+	}
+	while (s[i] != '\0' && j < len)
+	{
+		substring[j] = s[i];
+		i++;
+		j++;
+	}
+	substring[j] = '\0';
+	return (substring);
 }
