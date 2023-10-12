@@ -81,37 +81,37 @@ char	**ft_split(char const *s, char c)
 	return (result);
 }
 
-int	main(void)
-{
-	char	**result;
-	int		numStrings;
-	int		i;
+// int	main(void)
+// {
+// 	char	**result;
+// 	int		numStrings;
+// 	int		i;
 
-	result = ft_split("Monday,Tuesday,Wednesday", ',');
-	if (result == NULL)
-	{
-		printf("Memory allocation error.\n");
-		return (1);
-	}
-	// Calculate the number of strings in the array.
-	numStrings = 0;
-	while (result[numStrings] != NULL)
-	{
-		numStrings++;
-	}
-	i = 0;
-	while (i < numStrings)
-	{
-		printf("%s\n", result[i]); // Print each string in the array
-		i++;
-	}
-	// Free the memory allocated for the result array.
-	i = 0;
-	while (i < numStrings)
-	{
-		free(result[i]);
-		i++;
-	}
-	free(result);
-	return (0);
-}
+// 	result = ft_split("Monday,Tuesday,Wednesday", ',');
+// 	if (result == NULL)
+// 	{
+// 		printf("Memory allocation error.\n");
+// 		return (1);
+// 	}
+// 	// Calculate the number of strings in the array.
+// 	numStrings = 0;
+// 	while (result[numStrings] != NULL)
+// 	{
+// 		numStrings++;
+// 	}
+// 	i = 0;
+// 	while (i < numStrings)
+// 	{
+// 		printf("%s\n", result[i]); // Print each string in the array
+// 		i++;
+// 	}
+// 	// Free the memory allocated for the result array.
+// 	i = 0;
+// 	while (i < numStrings)
+// 	{
+// 		free(result[i]);
+// 		i++;
+// 	}
+// 	free(result);
+// 	return (0);
+// }
