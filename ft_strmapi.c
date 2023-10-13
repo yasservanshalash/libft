@@ -34,6 +34,7 @@ char	toUpper(unsigned int index, char c)
 {
 	if (c >= 'a' && c <= 'z')
 		return (c - 32);
+	printf("%d", index);
 	return (c);
 }
 int	main(void)
