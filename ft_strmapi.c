@@ -17,6 +17,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*result;
 	int		i;
 
+	if (s == NULL)
+		return (NULL);
 	result = (char *)malloc(ft_strlen(s) + 1);
 	if (result == NULL)
 		return (NULL);
@@ -37,9 +39,9 @@ char	toUpper(unsigned int index, char c)
 	printf("%d", index);
 	return (c);
 }
-int	main(void)
-{
-	// Write C code here
-	printf("%s", ft_strmapi("hello", toUpper));
-	return (0);
-}
+// int	main(void)
+// {
+// 	// Write C code here
+// 	printf("%s", ft_strmapi("hello", toUpper));
+// 	return (0);
+// }
