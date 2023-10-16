@@ -24,6 +24,7 @@ static int	ft_strlen(char *str)
 		i++;
 	return (i);
 }
+
 static void	ft_reverse_string(char *str)
 {
 	int		length;
@@ -93,7 +94,9 @@ static char	*ft_itoa(int n)
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	char *number = ft_itoa(n);
+	char	*number;
+
+	number = ft_itoa(n);
 	if (number == NULL)
 	{
 		// Handle memory allocation error

@@ -44,7 +44,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	return (result);
 }
 
-char	toUpper(unsigned int index, char c)
+char	to_upper(unsigned int index, char c)
 {
 	if (c >= 'a' && c <= 'z')
 		return (c - 32);
