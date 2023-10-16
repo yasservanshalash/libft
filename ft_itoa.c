@@ -23,6 +23,7 @@ static int	ft_strlen(char *str)
 		i++;
 	return (i);
 }
+
 static void	ft_reverse_string(char *str)
 {
 	int		length;
@@ -58,15 +59,11 @@ static int	digit_count(int n)
 	return (count);
 }
 
-char	*ft_itoa(int n)
+char	*logic(int digit_num, int number, int n, char *result)
 {
-	int		digit_num;
-	int		number;
-	char	*result;
-	int		i;
+	int	i;
 
-	digit_num = digit_count(n);
-	number = n;
+	i = 0;
 	if (n == 0)
 		return ("0");
 	if (n == -2147483648)
@@ -90,8 +87,20 @@ char	*ft_itoa(int n)
 	return (result);
 }
 
-// int	main(void)
-// {
-// 	printf("%s", ft_itoa(515611));
-// 	return (0);
-// }
+char	*ft_itoa(int n)
+{
+	int		digit_num;
+	int		number;
+	char	*result;
+
+	result = NULL;
+	digit_num = digit_count(n);
+	number = n;
+	return (logic(digit_num, number, n, result));
+}
+
+int	main(void)
+{
+	printf("%s", ft_itoa(-515611));
+	return (0);
+}
