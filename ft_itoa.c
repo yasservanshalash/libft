@@ -59,7 +59,7 @@ static int	digit_count(int n)
 	return (count);
 }
 
-char	*logic(int digit_num, int number, int n, char *result)
+static char	*logic(int digit_num, int number, int n, char *result)
 {
 	int	i;
 
