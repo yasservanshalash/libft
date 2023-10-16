@@ -99,8 +99,8 @@ char	*ft_itoa(int n)
 	return (logic(digit_num, number, n, result));
 }
 
-int	main(void)
-{
-	printf("%s", ft_itoa(-515611));
-	return (0);
-}
+// int	main(void)
+// {
+// 	printf("%s", ft_itoa(-515611));
+// 	return (0);
+// }
