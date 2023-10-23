@@ -6,7 +6,7 @@
 /*   By: yshalash <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 14:22:40 by yshalash          #+#    #+#             */
-/*   Updated: 2023/10/16 14:22:41 by yshalash         ###   ########.fr       */
+/*   Updated: 2023/10/23 12:30:00 by yasser           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,30 +62,30 @@ static int	digit_count(int n)
 
 static char	*ft_itoa(int n)
 {
-		int		digit_num;
-		int		number;
-		char	*result;
-		int		i;
+	int		digit_num;
+	int		number;
+	char	*result;
+	int		i;
 
-		digit_num = digit_count(n);
-		number = n;
-		i = 0;
-		result = (char *)malloc(sizeof(char) * (digit_num + 2));
-		if (n < 0)
-		{
-			result[0] = '-';
-			number = -number;
-			i = 1;
-		}
-		while (i < digit_num + (n < 0))
-		{
-			result[i] = (number % 10) + '0';
-			number /= 10;
-			i++;
-		}
-		result[i] = '\0';
-		ft_reverse_string(result + (n < 0));
-		return (result);
+	digit_num = digit_count(n);
+	number = n;
+	i = 0;
+	result = (char *)malloc(sizeof(char) * (digit_num + 2));
+	if (n < 0)
+	{
+		result[0] = '-';
+		number = -number;
+		i = 1;
+	}
+	while (i < digit_num + (n < 0))
+	{
+		result[i] = (number % 10) + '0';
+		number /= 10;
+		i++;
+	}
+	result[i] = '\0';
+	ft_reverse_string(result + (n < 0));
+	return (result);
 }
 
 void	ft_putnbr_fd(int n, int fd)
@@ -94,23 +94,24 @@ void	ft_putnbr_fd(int n, int fd)
 
 	number = ft_itoa(n);
 	if (n == 0)
-			write(fd, "0", 1);
+		write(fd, "0", 1);
 	else if (n == -2147483648)
-			write(fd, "-2147483648", 11);
-	else 
+		write(fd, "-2147483648", 11);
+	else
 	{
-	if (number == NULL)
-	{
-		// Handle memory allocation error
-		return ;
-	}
-	write(fd, number, ft_strlen(number));
+		if (number == NULL)
+		{
+			return ;
+		}
+		write(fd, number, ft_strlen(number));
 	}
 	free(number);
 }
 
-int main()
+/*
+int	main(void)
 {
-    ft_putnbr_fd(-2147483648, 1);
-    return 0;    
+	ft_putnbr_fd(-2147483648, 1);
+	return (0);
 }
+*/

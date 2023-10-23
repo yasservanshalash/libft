@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yshalash <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 09:17:11 by yshalash          #+#    #+#             */
-/*   Updated: 2023/10/03 17:49:01 by yshalash         ###   ########.fr       */
+/*   Updated: 2023/10/23 12:35:38 by yasser           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,7 @@ static int	word_counter(char const *s, char delimiter)
 	while (s[i] != '\0')
 	{
 		if (s[i] == delimiter)
-		{
 			count++;
-		}
 		i++;
 	}
 	return (count + 1);
@@ -44,25 +42,18 @@ char	**ft_split(char const *s, char c)
 	words = word_counter(s, c);
 	result = (char **)malloc(sizeof(char *) * (words + 1));
 	if (result == NULL)
-	{
 		return (NULL);
-	}
 	i = 0;
 	while (i < words)
 	{
 		while (*s == c)
-		{
 			s++;
-		}
 		j = 0;
 		while (s[j] != c && s[j] != '\0')
-		{
 			j++;
-		}
 		result[i] = (char *)malloc((j + 1) * sizeof(char));
 		if (result[i] == NULL)
 		{
-			// Handle memory allocation error
 			k = 0;
 			while (k < i)
 			{
