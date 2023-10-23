@@ -6,7 +6,7 @@
 /*   By: yshalash <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 14:23:12 by yshalash          #+#    #+#             */
-/*   Updated: 2023/10/23 12:31:09 by yasser           ###   ########.fr       */
+/*   Updated: 2023/10/23 13:11:50 by yasser           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 
 	if (s == NULL || f == NULL)
 	{
-		return (NULL);
 		i = 0;
 		while (s[i] != '\0')
 		{

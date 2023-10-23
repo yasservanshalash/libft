@@ -37,7 +37,7 @@ SRC	=	ft_atoi.c		\
 
 OBJS = $(SRC:.c=.o)
 
-BONUS_SRC =	ft_lstadd_back_bonus.c	\
+BONUS_SRC =#	ft_lstadd_back_bonus.c	\
 		ft_lstadd_front_bonus.c	\
 		ft_lstclear_bonus.c		\
 		ft_lstdelone_bonus.c	\
@@ -85,4 +85,4 @@ re:	fclean all
 bonus:
 	$(MAKE) BONUS=1 all
 
-.PHONY:	all clean fclean re bonus
+.PHONY:	all clean fclean re
